@@ -1,6 +1,5 @@
 import { View, Text, StyleSheet, SafeAreaView, Image, Dimensions } from 'react-native'
 import React from 'react'
-import WeatherSearch from './search'
 
 
 const WeatherInfo = ({weatherData, fetchWeatherData}) => {
@@ -16,7 +15,6 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
 
     return(
         <SafeAreaView style={styles.conteiner}>
-            <WeatherSearch fetchWeatherData={fetchWeatherData} />
             <View style={{alignItems:'center'}}>
                 <Text style={styles.title}>
                     {name}
@@ -44,7 +42,7 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
                     {feels_like}°C
                     </Text>
                     <Text style={styles.infoText}>
-                    Feels Like
+                    Sensación
                     </Text>
                 </View>
                 <View style={styles.info}>
@@ -56,7 +54,7 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
                     {humidity}%
                     </Text>
                     <Text style={styles.infoText}>
-                    humidity
+                    Humedad
                     </Text>
                 </View>
             </View>
@@ -70,7 +68,7 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
                     {visibility} m2
                     </Text>
                     <Text style={styles.infoText}>
-                    visibility
+                    Visibilidad
                     </Text>
                 </View>
                 <View style={styles.info}>
@@ -82,7 +80,7 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
                     {speed} m/s
                     </Text>
                     <Text style={styles.infoText}>
-                    Wind Speed
+                    Velocidad de viento
                     </Text>
                 </View>
             </View>
@@ -96,7 +94,7 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
                     {new Date(sunrise*1000).toLocaleString()}
                     </Text>
                     <Text style={styles.infoText}>
-                    sunrise
+                    Amanecer
                     </Text>
                 </View>
                 <View style={styles.info}>
@@ -108,7 +106,7 @@ const WeatherInfo = ({weatherData, fetchWeatherData}) => {
                     {new Date(sunset*1000).toLocaleString()}
                     </Text>
                     <Text style={styles.infoText}>
-                    Sunset
+                    Atardecer
                     </Text>
                 </View>
             </View>
